@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+    /* 标准属性 */
+    -webkit-user-select: none;
+    /* Chrome, Safari 和 Opera */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+}
+
+body,
+html {
+    height: 100%;
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: space-between;
+    /* 保证标题和图片正确分布 */
+    align-items: center;
+}
+
+h1,
+h2 {
+    text-align: center;
+    margin: 10px 0;
+    height: 40px;
+    /* 固定标题高度 */
+}
+
+#image-container {
+    width: 100%;
+    max-height: calc(100vh - 110px);
+    /* 100vh减去标题的总高度，2个标题共80px+margin */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+img {
+    padding-top: 10px;
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+    /* 保持图片的纵横比 */
+    -webkit-user-drag: none;
+    /* Chrome, Safari 和 Opera */
+    -moz-user-drag: none;
+    /* Firefox */
+    -ms-user-drag: none;
+    /* Internet Explorer/Edge */
+}
